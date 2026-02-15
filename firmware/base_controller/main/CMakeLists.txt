@@ -1,0 +1,18 @@
+idf_component_register(
+    SRCS
+        "main.c"
+        "motor_control.c"
+        "pid_controller.c"
+        "kinematics.c"
+        "odometry.c"
+        "imu_driver.c"
+        "comm_interface.c"
+    INCLUDE_DIRS
+        "."
+    REQUIRES
+        driver
+        esp_timer
+        esp_adc
+        freertos
+        esp_hw_support
+)

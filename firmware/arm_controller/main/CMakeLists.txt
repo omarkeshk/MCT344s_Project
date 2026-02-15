@@ -1,0 +1,15 @@
+idf_component_register(
+    SRCS
+        "main.c"
+        "servo_control.c"
+        "arm_kinematics.c"
+        "gripper.c"
+        "comm_interface.c"
+    INCLUDE_DIRS
+        "."
+    REQUIRES
+        driver
+        esp_timer
+        freertos
+        esp_hw_support
+)

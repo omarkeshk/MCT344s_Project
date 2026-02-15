@@ -1,0 +1,59 @@
+# Robot Configuration Parameters
+
+# Mobile Base
+base:
+  wheel_radius_m: 0.030         # 60mm diameter mecanum wheels
+  base_half_width_m: 0.150      # lx: center to wheel (X direction)
+  base_half_length_m: 0.150     # ly: center to wheel (Y direction)
+  max_linear_speed_ms: 0.5      # Max vx, vy in m/s
+  max_angular_speed_rads: 1.5   # Max omega in rad/s
+  encoder_ticks_per_rev: 360    # Encoder PPR at output shaft
+
+# Arm
+arm:
+  base_height_mm: 150.0         # Shoulder axis height above base frame
+  l1_mm: 120.0                  # Shoulder to elbow
+  l2_mm: 120.0                  # Elbow to wrist
+  l3_mm: 80.0                   # Wrist to gripper tip
+  joint_limits_deg:
+    j1_min: 0
+    j1_max: 180
+    j2_min: 0
+    j2_max: 180
+    j3_min: 0
+    j3_max: 180
+    j4_min: 0
+    j4_max: 180
+
+# Gripper
+gripper:
+  open_angle_deg: 90
+  close_angle_deg: 30
+  grasp_timeout_s: 2.0
+
+# Communication
+comm:
+  base_port: "/dev/ttyUSB0"     # ESP32 base controller
+  arm_port: "/dev/ttyUSB1"      # ESP32 arm controller
+  baud_rate: 921600
+  heartbeat_interval_s: 0.5
+  heartbeat_timeout_s: 1.0
+
+# Teleop
+teleop:
+  deadzone: 0.1                 # Joystick deadzone
+  linear_scale: 0.3             # Scale factor for vx, vy
+  angular_scale: 1.0            # Scale factor for omega
+
+# Camera
+camera:
+  device_id: 0                  # /dev/video0 or CSI camera index
+  width: 640
+  height: 480
+  fps: 30
+
+# Arena
+arena:
+  pedestal_height_mm: 400
+  lane_width_m: 0.8
+  cube_size_mm: 50

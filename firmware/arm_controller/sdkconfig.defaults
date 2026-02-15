@@ -1,0 +1,39 @@
+# ------------------------------------------------------------------
+# sdkconfig.defaults — Arm Controller (ESP32-S3)
+# ------------------------------------------------------------------
+
+# Target
+CONFIG_IDF_TARGET="esp32s3"
+
+# Flash / Partition
+CONFIG_ESPTOOLPY_FLASHSIZE_4MB=y
+CONFIG_PARTITION_TABLE_SINGLE_APP=y
+
+# FreeRTOS
+CONFIG_FREERTOS_HZ=1000
+CONFIG_FREERTOS_UNICORE=n
+CONFIG_FREERTOS_TIMER_TASK_STACK_DEPTH=4096
+
+# TWAI (CAN bus)
+CONFIG_TWAI_ISR_IN_IRAM=y
+
+# Watchdog
+CONFIG_ESP_TASK_WDT_EN=y
+CONFIG_ESP_TASK_WDT_TIMEOUT_S=5
+CONFIG_ESP_INT_WDT_TIMEOUT_MS=300
+
+# Log level — INFO in production, DEBUG while developing
+CONFIG_LOG_DEFAULT_LEVEL_INFO=y
+CONFIG_LOG_DEFAULT_LEVEL=3
+
+# UART console on USB-JTAG (ESP32-S3 built-in USB)
+CONFIG_ESP_CONSOLE_USB_SERIAL_JTAG=y
+
+# Power management off (deterministic timing for servo PWM)
+CONFIG_PM_ENABLE=n
+
+# Stack overflow detection
+CONFIG_FREERTOS_CHECK_STACKOVERFLOW_CANARY=y
+
+# Math library — enable single-precision float for trig functions
+CONFIG_NEWLIB_NANO_FORMAT=n
