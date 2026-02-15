@@ -1,0 +1,65 @@
+# Build artifacts
+build/
+dist/
+*.o
+*.elf
+*.bin
+*.map
+*.hex
+
+# ESP-IDF
+sdkconfig
+sdkconfig.old
+managed_components/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.venv/
+venv/
+env/
+*.egg
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# CAD backups
+*.bak
+*.tmp
+~$*
+*.dwl
+*.dwl2
+
+# KiCad backups
+*-backups/
+fp-info-cache
+
+# 3D printing temp
+*.gcode
+
+# Logs
+*.log
+
+# Environment / secrets
+.env
+
+# Compiled firmware
+firmware/*/build/
+
+# Jupyter notebooks checkpoints
+.ipynb_checkpoints/
+
+# OS files
+.DS_Store
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Desktop.ini
