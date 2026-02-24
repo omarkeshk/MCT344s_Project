@@ -1,0 +1,12 @@
+# MATLAB and Simulink Ignored Files
+*.asv
+*.m~
+*.autosave
+slprj/
+*.slxc
+*.mexw64
+*.mat
+
+# OS generated files
+.DS_Store
+Thumbs.db
